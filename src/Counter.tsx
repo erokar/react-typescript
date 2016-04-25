@@ -6,22 +6,22 @@ interface ICounterProps {
 }
 
 interface ICounterState {
-	counter: number;
+	count: number;
 }
 
 export default class Counter extends React.Component<ICounterProps, ICounterState> {
 	private interval: number;
-
+	
 	constructor(props) {
 		super(props);
-		this.state = { counter: 0 };
-		this.interval = window.setInterval(() => this.tick(), 1000);
+		this.state = { count: 0 };
+		this.increment = this.increment.bind(this);
 	}
 
-	tick() {
+	increment() {
 		this.setState({
-			counter: this.state.counter + this.props.increment
-		});
+			count: this.state.count + this.props.increment
+		})
 	}
 
 	componentWillUnmount() {
@@ -30,9 +30,12 @@ export default class Counter extends React.Component<ICounterProps, ICounterStat
 
 	render() {
 		return (
-			<h1 style={{ color: this.props.color }}>
-				Counter ({this.props.increment}): {this.state.counter}
-			</h1>
+			<div>
+				<h1 style={{ color: this.props.color }}>
+					Increment: {this.props.increment} Counter: {this.state.count}
+				</h1>
+				<button onClick={this.increment}>+</button>
+			</div>
 		);
 	}
 }

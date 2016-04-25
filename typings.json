@@ -1,0 +1,8 @@
+{
+  "name": "react-transform-boilerplate-ts",
+  "version": false,
+  "ambientDependencies": {
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38",
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
+  }
+}
