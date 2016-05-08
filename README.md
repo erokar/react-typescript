@@ -8,5 +8,3 @@ React + Typescript Boilerplate
 3. `npm start`
 
 Open localhost:3000
-
-.
